@@ -1,0 +1,9 @@
+1 Working with and understanding objects is key to understanding JavaScript as 
+a whole.
+2 JavaScript has two types:
+ primitive types and reference types.
+ While other programming languages distinguish between primitive and reference
+ types by storing primitives on the stack and references in the heap, 
+ JavaScript does away with this concept completely: It tracks variables for a
+ particular scope 
+3 
