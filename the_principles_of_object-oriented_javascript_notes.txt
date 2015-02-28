@@ -1,9 +1,158 @@
-1 Working with and understanding objects is key to understanding JavaScript as 
-a whole.
-2 JavaScript has two types:
- primitive types and reference types.
- While other programming languages distinguish between primitive and reference
- types by storing primitives on the stack and references in the heap, 
- JavaScript does away with this concept completely: It tracks variables for a
- particular scope 
-3 
+>>> Data Types:
+1 JavaScript has two types:
+ >> primitive types
+   1.1 JavaScript tracks variables for a particular scope with a variable object. 
+ Primitive values are stored directly on the variable object, while reference values
+ are placed as a pointer in the variable object, which serves as a reference to a 
+ location in memory where the object is stored.
+   1.2 Primitive types represent simple pieces of data that are stored as is.
+   1.3 Despite they are primitive types, they actually have methods.
+ >> reference types
+   1.4 Reference values are instances of reference types and are synonymous with
+ objects.
+   1.5 An object is an unordered list of properties consisting of name(always a
+ string) and a value. When the value of a property is a function, it is called a
+ method. Functions themselves are actually reference values in JavaScript, except
+ that it can be executed.
+   1.6 Reference types do not store the object directly into the variable to which
+ it is assigned, instead, it holds a pointer(or reference)to the location in memory
+ where the object exists.
+   1.7 When you assign an object to a variable, you're actually assigning a pointer.
+ That means if you assign one variable to another, each variable gets a copy of the 
+ pointer, and both still reference to the same object in memory, while primitive types
+ will hold an own copy each of them.
+ >> primitive wrapper types
+   1.8 There are 3 primitive wrapper types:String, Number, and Boolean
+   1.9 These special reference types exist to make working with primitive values
+ as easy as working with objects.
+   1.10 The primitive wrapper types are reference types that are automatically created
+ behind the scenes whenever strings, numbers, or boolean are read.
+   1.11 When working with regular objects, you can add properties at any time and 
+ they stay until you manually remove them. With primitive wrapper types, properties
+ seem to disappear because the object on which the property was assigned is destroyed
+ immediately afterwards.  
+ 
+2 Creating objects 
+  2.1 JavaScript objects are nothing more than hash tables.
+  2.2 the new operator 
+  2.3 var object = new Object();
+  2.4 Dereferencing objects
+    2.4.1 JavaScript is a garbage-collected language, so you don't really need to
+  worry about memory allocations when you use reference types.
+    2.4.2 However, it's best to dereference objects that you no longer need so that 
+  the garbage collector can free up that memory. And the best way to do that is to 
+  set the object variable to null.
+    2.4.3 When there are no more reference to an object in memory, the garbage 
+  collector can use that memory for something else.
+
+3 Adding or removing properties
+  3.1 In JavaScript, you can modify(add and remove)properties of an object at any time.
+  3.2 And there are also ways to prevent modifications against an objects.
+
+4 Literal forms
+  4.1 Several built-in reference types have literal forms.
+  4.2 A literal is syntax that allows you to define a reference value without explicitly
+ creating an object, using the new operator and the object's constructor.
+  4.3 Using an object literal doesn't actually call new Object(). Instead, the JavaScript
+ engine follows the same step it does when using new Object() without actually calling
+ the constructor. That is true for all reference literals.
+  4.4 Function literals 
+  4.5 Regular expression literals
+ 
+>>> Functions:
+5 Internal properties 
+  5.1 Functions are actually objects with an internal property called [[call]]
+  5.2 Internal properties are not accessible via code but rather define the behaviour
+ of objects in JavaScript.
+  5.3 The [[Call]] property is unique to functions and indicates that the object
+ can be executed.
+6 Declarations v.s. Expressions
+  6.1 There are two literal forms of functions:
+    >> function declaration
+	  function add(num1, num2) {return num1 + num2;}
+	>> function expression
+	  var add = function(num1, num2) {return num1 + num2;};
+	>> Although the two literal forms are quite similar, they differ in a very important
+	way: Function declarations are hoisted to the top of the context(either the function
+	in which the declaration occurs or the global scope) when the code is executed. That
+	means you can actually define a function after it is used in code without generating
+	an error.
+7 Functions as values
+  7.1 JavaScript has first-class functions, you can use them just as you do any other
+ objects such as:
+ 1) assign them to variables 
+ 2) add them to objects 
+ 3) pass them to other functions as arguments
+  7.2 Keep in mind that functions are objects, a lot of the behaviour starts to make 
+ sense.
+  7.3 Parameters
+ 1) JavaScript function parameters are actually stored as an array-like structure
+ called arguments.
+ 2) Just like a regular JavaScript array, arguments can grow to contain any number of
+ values. So you can pass in any number of arguments to a function without causing errors.
+ 3) The arguments object is not an instance of Array and therefore doesn't have the 
+ same methods as an array. Array.isArray(arguments) always returns false.
+ 4) On the other hand, JavaScript doesn't ignore the named parameters of a function.
+ 5) The length property indicates the function's arity(or the number of parameters it
+ expects).
+ 6) Knowing the function's arity is important in JavaScript because functions won't 
+ throw an error if you pass in too many or too few parameters.
+ 7) The number of arguments passed to the function has no effect on the arity.
+
+>>> Understanding JavaScript objects 
+8 Whereas class-based languages lock down objects based on a class definition, JavaScript
+  object have no such restrictions.
+9 Keep in mind that JavaScript objects are dynamic, meaning that they can change at
+  any point during code execution.
+10 Defining properties
+  1) via new operator, using the Object constructor 
+  2) via object literal
+11 Objects are open for modification unless specified otherwise,
+ >> The [[Put]] and [[Set]] operation
+   [[Put]]
+  1)  When a property is first added to an object, an internal method called [[Put]]
+   creates a spot in the object to store the property.
+  2) The [[Put]] method adds not just the initial value, but also some attributes of the 
+   property. 
+  3) The result of calling [[Put]] is the creation of an own property on the 
+   object. An own property simply indicates that the specific instance of the object
+   owns that property. The property is stored directly on the instance, and all operations
+   on the property must be performed through that object.
+   [[Set]]
+  4) When a new value is assigned to an existing property, a separate operation called
+   [[Set]] takes place.
+  5) The [[Set]] operation replaces the current value of the property with the new one.
+12 Detecting properties
+  12.1 
+13 Removing properties 
+  13.1 
+14 Enumeration
+  14.1 
+15 Types of properties 
+  15.1 
+16 Retrieving property attributes
+  16.1 
+17 Preventing object modification 
+  17.1 
+
+>>> Constructors and prototypes
+18 
+  
+
+  
+ 
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+ 
