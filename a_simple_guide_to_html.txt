@@ -23,6 +23,15 @@
 4 Tag attributes
   4.1 Attributes allow you to customize a tag, and are defined within the 
  opening tag. 
+  4.2 Most attributes are optional for most tags, and are only used when
+ you want to change something about the default way a tag is displayed by
+ the browser. However, some tags such as the <img> tag has required attributes
+ such as src and alt which are needed in order for the browser to display the 
+ web page properly.
+  4.3 Attributes are often assigned a value using the equal sign, such as
+ border="0" or width="50%", but there are some that only need to be declared
+ in the tag like this: <hr noshade>
+ 
  
  
   
