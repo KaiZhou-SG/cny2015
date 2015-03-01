@@ -1,0 +1,28 @@
+>>> A simple guide to HTML
+1 What is HTML
+  1.1 HTML = Hyper-Text Mark-up Language, it's a language for describing 
+ web-pages using ordinary text.
+  1.2 HTML is NOT a complex language.
+2 HTML files
+  2.1 Every web page is actually a HTML file. Each HTML file is just a plain-
+ text file, but with a .html file extension instead of .txt, and is made up of 
+ many HTML tags as well as the content for a web page.
+  2.2 A web site will often contain many html files that link to each other. 
+ You can edit HTML files with your favourite editor.
+3 HTML tags
+  3.1 HTML tags are the hidden keywords within a web page that define how the
+ browser must format and display the content. 
+  3.2 Most tags must have two parts: an opening and a closing part. Note that
+ the closing tag has the same text as the opening tag, but has an additional
+ forward-slash(/) character. I tend to interpret this as the "end" or "close"
+ character.
+  3.3 Each HTML file must have the essential tags for it to be valid, so that
+ web browsers can understand it and display it correctly. The rest of the HTML
+ file can then contain as little or as many tags as you want to display your
+ content.
+4 Tag attributes
+  4.1 Attributes allow you to customize a tag, and are defined within the 
+ opening tag. 
+ 
+ 
+  

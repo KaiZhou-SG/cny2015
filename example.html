@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <script type="text/javascript">
+   function functionOne() { alert('You clicked the top text'); }
+   function functionTwo() { alert('You clicked the bottom text'); }
+   var onTopClick = function() {alert("you clicked the top text.");};
+   var onBottomClick = function() {alert("you clicked the bottom text.");};
+  </script>
+ </head>
+ <body>
+  <p><a href="#" onClick="onTopClick();">Top Text</a></p>
+  <p><a href="onBottomClick();">Bottom Text</a></p>
+  <p><a href="#" onClick="onBottomClick();">Bottom Text again</a></p>
+  <style type="text/css">
+   .red { border: 2px solid red; }
+   .blue { border: 2px solid blue; }
+  </style>
+  <p><img name="photo" src=".//holmes.jpg" 
+    onMouseOver="photo.setAttribute('class', 'red')" 
+    onMouseOut="photo.setAttribute('class', 'blue')">
+  </p>
+ </body>
+</html>

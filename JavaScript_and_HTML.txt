@@ -1,0 +1,31 @@
+JavaScript in HTML
+
+>>> HEmbedding JavaScripts into HTML
+1 Between script tags
+  1.1 use the script tag, and put the codes in-between the tags
+    <script type="text/javascript">
+	  // codes go here
+	</script>
+2 External files
+  2.1 use the script tag with src attribute:
+    <script type="text/javascript" src="scriptName.js">
+	  // the source code file scriptName.js is copied to this HTML page
+	</script>
+3 Inline in the HTML
+  3.1 Normally the HTML event attributes are used to call functions specified
+ elsewhere in script tags. In rare cases you may wish to add the javascript 
+ code directly to these onClick or onMouseOver event tags, this is not 
+ considered good design.
+>>> Events
+  Some html elements have event attributes, that can be used to call JavaScript
+  functions when an event is triggered.
+  There are many events available, and these three are most usual ones:
+4 OnClick
+  4.1 this attribute is executed when an element, such as a link or image, is 
+ clicked on.
+5 OnMouseOver
+  5.1 this attribute is executed when a user moves the mouse onto and hovers 
+ over an element.
+6 OnMouseOut
+  6.1 OnMouseOut is the opposite to OnMouseOver, and will be called when the 
+ user's mouse is moved back off an element
